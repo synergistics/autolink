@@ -1,11 +1,16 @@
 {
-  "name": "linker",
+  "name": "autolink",
   "version": "0.0.0",
   "description": "A tool for linking files in arbitrary locations to other arbitrary locations",
-  "main": "linker.js",
+  "main": "autolink.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+	"bin": "./bin/autolink.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/synergistics/autolink"
+	},
   "license": "ISC"
 }
