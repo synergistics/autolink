@@ -1,0 +1,11 @@
+{
+  "name": "linker",
+  "version": "0.0.0",
+  "description": "A tool for linking files in arbitrary locations to other arbitrary locations",
+  "main": "linker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
