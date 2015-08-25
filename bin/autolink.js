@@ -42,7 +42,10 @@ function init(){
 
 // Create a symbolic link
 function link(sourcePath, linkPath){
-	fs.symlink(sourcePath, linkPath, function(err){
+	var sourcePathAbsolute = path.resolve(sourcePath);
+	var linkPathAbsolute = path.resolve(linkPath)
+
+	fs.symlink(sourcePathAbsolute, linkPathAbsolute, function(err){
 		if (err){
 			console.log(err);
 			return;
@@ -52,8 +55,6 @@ function link(sourcePath, linkPath){
 		
 		fs.readFile(linkFile, {encoding: "utf8"}, function(err, data){
 			var links = JSON.parse(data);
-			var sourcePathAbsolute = path.resolve(sourcePath);
-			var linkPathAbsolute = path.resolve(linkPath)
 
 			// Make a new entry for a sourcePathAbsolute in linkFile if one does not exist
 			if (!(links.hasOwnProperty(sourcePathAbsolute)) || links[sourcePathAbsolute].constructor !== Array){
